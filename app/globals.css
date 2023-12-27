@@ -1,0 +1,492 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+      height: 100%;
+      width: 100%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
+    --nartec-color-blue-dark-1: #001a4d;
+  --nartec-color-blue-dark-2: #001335;
+  --nartec-color-blue: #002c6c;
+  --nartec-color-danger-dark-1: #90151a;
+  --nartec-color-danger-dark-2: #750e13;
+  --nartec-color-danger-light-1: #ffcccc;
+  --nartec-color-danger-light-2: #ffdfdf;
+  --nartec-color-danger: #ba1b23;
+  --nartec-color-forest-accessible-dark-1: #026b30;
+  --nartec-color-forest-accessible-dark-2: #014b22;
+  --nartec-color-forest-accessible-light-1: #b3eacb;
+  --nartec-color-forest-accessible-light-2: #ccf1dc;
+  --nartec-color-forest-accessible: #008037;
+  --nartec-color-forest: #00ac4a;
+  --nartec-color-gold-accessible-dark-1: #665b0b;
+  --nartec-color-gold-accessible-dark-2: #4e4608;
+  --nartec-color-gold-accessible: #826f00;
+  --nartec-color-gold: #c4b000;
+  --nartec-color-grass-accessible-dark-1: #376911;
+  --nartec-color-grass-accessible-dark-2: #2c530e;
+  --nartec-color-grass-accessible: #417e12;
+  --nartec-color-grass: #7ac143;
+  --nartec-color-honey-accessible-dark-1: #705517;
+  --nartec-color-honey-accessible-dark-2: #594312;
+  --nartec-color-honey-accessible: #8d6b19;
+  --nartec-color-honey: #b78b20;
+  --nartec-color-lavender-accessible-dark-1: #6f4aa8;
+  --nartec-color-lavender-accessible-dark-2: #604091;
+  --nartec-color-lavender-accessible: #835cbc;
+  --nartec-color-lavender: #af96d4;
+  --nartec-color-lime-accessible-dark-1: #576111;
+  --nartec-color-lime-accessible-dark-2: #3e450c;
+  --nartec-color-lime-accessible: #667800;
+  --nartec-color-lime: #c1d82f;
+  --nartec-color-link-accessible-dark-1: #0a5e7a;
+  --nartec-color-link-accessible-dark-2: #084c63;
+  --nartec-color-link-accessible: #00799e;
+  --nartec-color-link: #008dbd;
+  --nartec-color-mint-accessible-dark-1: #276b45;
+  --nartec-color-mint-accessible-dark-2: #1f5637;
+  --nartec-color-mint-accessible: #3f7c5a;
+  --nartec-color-mint: #71b790;
+  --nartec-color-mist-accessible-dark-1: #356577;
+  --nartec-color-mist-accessible-dark-2: #2a515f;
+  --nartec-color-mist-accessible: #41778c;
+  --nartec-color-mist: #8db9ca;
+  --nartec-color-olive-accessible-dark-1: #576337;
+  --nartec-color-olive-accessible-dark-2: #48522e;
+  --nartec-color-olive-accessible: #677642;
+  --nartec-color-olive: #9dbb68;
+  --nartec-color-orange-accessible-dark-1: #a82c05;
+  --nartec-color-orange-accessible-dark-2: #912305;
+  --nartec-color-orange-accessible: #cd3c0d;
+  --nartec-color-orange: #f26334;
+  --nartec-color-peach-accessible-dark-1: #855304;
+  --nartec-color-peach-accessible-dark-2: #6d4403;
+  --nartec-color-peach-accessible: #9d6304;
+  --nartec-color-peach: #fbb034;
+  --nartec-color-purple-accessible-dark-1: #823d80;
+  --nartec-color-purple-accessible-dark-2: #6f346d;
+  --nartec-color-purple-accessible: #a2539a;
+  --nartec-color-purple: #bd80b7;
+  --nartec-color-raspberry-accessible-dark-1: #b32253;
+  --nartec-color-raspberry-accessible-dark-2: #961c46;
+  --nartec-color-raspberry-accessible: #d12b61;
+  --nartec-color-raspberry: #f05587;
+  --nartec-color-sky-accessible-dark-1: #095a6b;
+  --nartec-color-sky-accessible-dark-2: #074755;
+  --nartec-color-sky-accessible: #007b93;
+  --nartec-color-sky: #00b6de;
+  --nartec-color-slate-accessible-dark-1: #235696;
+  --nartec-color-slate-accessible-dark-2: #1c4578;
+  --nartec-color-slate-accessible: #3a70bf;
+  --nartec-color-slate: #89aadb;
+  --nartec-color-tangerine-accessible-dark-1: #7a3d00;
+  --nartec-color-tangerine-accessible-dark-2: #663300;
+  --nartec-color-tangerine-accessible-light-1: #ffdab3;
+  --nartec-color-tangerine-accessible-light-2: #ffe6cc;
+  --nartec-color-tangerine-accessible: #a15700;
+  --nartec-color-tangerine: #ff8200;
+  --nartec-color-teal-accessible-dark-1: #14615f;
+  --nartec-color-teal-accessible-dark-2: #104c4b;
+  --nartec-color-teal-accessible: #177c7a;
+  --nartec-color-teal: #22bcb9;
+  --nartec-color-terracotta-accessible-dark-1: #854525;
+  --nartec-color-terracotta-accessible-dark-2: #703a1f;
+  --nartec-color-terracotta-accessible: #ab5a2f;
+  --nartec-color-terracotta: #d18158;
+  --nartec-color-white: #ffffff;
+  --nartec-color-ui-1: #f0f5fa;
+  --nartec-color-ui-2: #e5f0fc;
+  --nartec-color-ui-3: #c4d7ed;
+  --nartec-color-ui-4: #e5e8eb;
+  --nartec-color-ui-5: #a6b0bb;
+  --nartec-color-ui-6: #696d73;
+  --nartec-color-ui-7: #414345;
+  --nartec-color-ui-8: #262626;
+  }
+  .group::-webkit-scrollbar {
+    width: 0.2em;
+  }
+
+  /* Track */
+  .group::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  /* Handle */
+  .group::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 3px;
+    height: 0.1em;
+  }
+
+  /* Show the scrollbar on hover */
+  .group:hover::-webkit-scrollbar-thumb {
+    background-color: #f26334; /* Change the color to your preference */
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* nartec css */
+.nartec-color-blue {
+  color: #002c6c !important;
+}
+.nartec-background-color-blue {
+  background-color: #002c6c !important;
+}
+.nartec-color-danger {
+  color: #ba1b23 !important;
+}
+.nartec-background-color-danger {
+  background-color: #ba1b23 !important;
+}
+.nartec-color-forest-accessible {
+  color: #008037 !important;
+}
+.nartec-background-color-forest-accessible {
+  background-color: #008037 !important;
+}
+.nartec-color-forest {
+  color: #00ac4a !important;
+}
+.nartec-background-color-forest {
+  background-color: #00ac4a !important;
+}
+.nartec-color-gold-accessible {
+  color: #826f00 !important;
+}
+.nartec-background-color-gold-accessible {
+  background-color: #826f00 !important;
+}
+.nartec-color-gold {
+  color: #c4b000 !important;
+}
+.nartec-background-color-gold {
+  background-color: #c4b000 !important;
+}
+.nartec-color-grass-accessible {
+  color: #417e12 !important;
+}
+.nartec-background-color-grass-accessible {
+  background-color: #417e12 !important;
+}
+.nartec-color-grass {
+  color: #7ac143 !important;
+}
+.nartec-background-color-grass {
+  background-color: #7ac143 !important;
+}
+.nartec-color-honey-accessible {
+  color: #8d6b19 !important;
+}
+.nartec-background-color-honey-accessible {
+  background-color: #8d6b19 !important;
+}
+.nartec-color-honey {
+  color: #b78b20 !important;
+}
+.nartec-background-color-honey {
+  background-color: #b78b20 !important;
+}
+.nartec-color-lavender-accessible {
+  color: #835cbc !important;
+}
+.nartec-background-color-lavender-accessible {
+  background-color: #835cbc !important;
+}
+.nartec-color-lavender {
+  color: #af96d4 !important;
+}
+.nartec-background-color-lavender {
+  background-color: #af96d4 !important;
+}
+.nartec-color-lime-accessible {
+  color: #667800 !important;
+}
+.nartec-background-color-lime-accessible {
+  background-color: #667800 !important;
+}
+.nartec-color-lime {
+  color: #c1d82f !important;
+}
+.nartec-background-color-lime {
+  background-color: #c1d82f !important;
+}
+.nartec-color-link-accessible {
+  color: #00799e !important;
+}
+.nartec-background-color-link-accessible {
+  background-color: #00799e !important;
+}
+.nartec-color-link {
+  color: #008dbd !important;
+}
+.nartec-background-color-link {
+  background-color: #008dbd !important;
+}
+.nartec-color-mint-accessible {
+  color: #3f7c5a !important;
+}
+.nartec-background-color-mint-accessible {
+  background-color: #3f7c5a !important;
+}
+.nartec-color-mint {
+  color: #71b790 !important;
+}
+.nartec-background-color-mint {
+  background-color: #71b790 !important;
+}
+.nartec-color-mist-accessible {
+  color: #41778c !important;
+}
+.nartec-background-color-mist-accessible {
+  background-color: #41778c !important;
+}
+.nartec-color-mist {
+  color: #8db9ca !important;
+}
+.nartec-background-color-mist {
+  background-color: #8db9ca !important;
+}
+.nartec-color-olive-accessible {
+  color: #677642 !important;
+}
+.nartec-background-color-olive-accessible {
+  background-color: #677642 !important;
+}
+.nartec-color-olive {
+  color: #9dbb68 !important;
+}
+.nartec-background-color-olive {
+  background-color: #9dbb68 !important;
+}
+.nartec-color-orange-accessible {
+  color: #cd3c0d !important;
+}
+.nartec-background-color-orange-accessible {
+  background-color: #cd3c0d !important;
+}
+.nartec-color-orange {
+  color: #f26334 !important;
+}
+.nartec-background-color-orange {
+  background-color: #f26334 !important;
+}
+.nartec-color-peach-accessible {
+  color: #9d6304 !important;
+}
+.nartec-background-color-peach-accessible {
+  background-color: #9d6304 !important;
+}
+.nartec-color-peach {
+  color: #fbb034 !important;
+}
+.nartec-background-color-peach {
+  background-color: #fbb034 !important;
+}
+.nartec-color-purple-accessible {
+  color: #a2539a !important;
+}
+.nartec-background-color-purple-accessible {
+  background-color: #a2539a !important;
+}
+.nartec-color-purple {
+  color: #bd80b7 !important;
+}
+.nartec-background-color-purple {
+  background-color: #bd80b7 !important;
+}
+.nartec-color-raspberry-accessible {
+  color: #d12b61 !important;
+}
+.nartec-background-color-raspberry-accessible {
+  background-color: #d12b61 !important;
+}
+.nartec-color-raspberry {
+  color: #f05587 !important;
+}
+.nartec-background-color-raspberry {
+  background-color: #f05587 !important;
+}
+.nartec-color-sky-accessible {
+  color: #007b93 !important;
+}
+.nartec-background-color-sky-accessible {
+  background-color: #007b93 !important;
+}
+.nartec-color-sky {
+  color: #00b6de !important;
+}
+.nartec-background-color-sky {
+  background-color: #00b6de !important;
+}
+.nartec-color-slate-accessible {
+  color: #3a70bf !important;
+}
+.nartec-background-color-slate-accessible {
+  background-color: #3a70bf !important;
+}
+.nartec-color-slate {
+  color: #89aadb !important;
+}
+.nartec-background-color-slate {
+  background-color: #89aadb !important;
+}
+.nartec-color-tangerine-accessible {
+  color: #a15700 !important;
+}
+.nartec-background-color-tangerine-accessible {
+  background-color: #a15700 !important;
+}
+.nartec-color-tangerine {
+  color: #ff8200 !important;
+}
+.nartec-background-color-tangerine {
+  background-color: #ff8200 !important;
+}
+.nartec-color-teal-accessible {
+  color: #177c7a !important;
+}
+.nartec-background-color-teal-accessible {
+  background-color: #177c7a !important;
+}
+.nartec-color-teal {
+  color: #22bcb9 !important;
+}
+.nartec-background-color-teal {
+  background-color: #22bcb9 !important;
+}
+.nartec-color-terracotta-accessible {
+  color: #ab5a2f !important;
+}
+.nartec-background-color-terracotta-accessible {
+  background-color: #ab5a2f !important;
+}
+.nartec-color-terracotta {
+  color: #d18158 !important;
+}
+.nartec-background-color-terracotta {
+  background-color: #d18158 !important;
+}
+.nartec-color-white {
+  color: #ffffff !important;
+}
+.nartec-background-color-white {
+  background-color: #ffffff !important;
+}
+.nartec-color-ui-1 {
+  color: #f0f5fa !important;
+}
+.nartec-background-color-ui-1 {
+  background-color: #f0f5fa !important;
+}
+.nartec-color-ui-2 {
+  color: #e5f0fc !important;
+}
+.nartec-background-color-ui-2 {
+  background-color: #e5f0fc !important;
+}
+.nartec-color-ui-3 {
+  color: #c4d7ed !important;
+}
+.nartec-background-color-ui-3 {
+  background-color: #c4d7ed !important;
+}
+.nartec-color-ui-4 {
+  color: #e5e8eb !important;
+}
+.nartec-background-color-ui-4 {
+  background-color: #e5e8eb !important;
+}
+.nartec-color-ui-5 {
+  color: #a6b0bb !important;
+}
+.nartec-background-color-ui-5 {
+  background-color: #a6b0bb !important;
+}
+.nartec-color-ui-6 {
+  color: #696d73 !important;
+}
+.nartec-background-color-ui-6 {
+  background-color: #696d73 !important;
+}
+.nartec-color-ui-7 {
+  color: #414345 !important;
+}
+.nartec-background-color-ui-7 {
+  background-color: #414345 !important;
+}
+.nartec-color-ui-8 {
+  color: #262626 !important;
+}
+.nartec-background-color-ui-8 {
+  background-color: #262626 !important;
+} 
